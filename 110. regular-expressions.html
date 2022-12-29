@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regular expressions</title>
+</head>
+
+<body>
+    <p>String: <span id="string"></span></p>
+    <p>Pattern: <span id="pattern"></span></p>
+    <p>Result(search): <span id="search"></span></p>
+    <p>Result(match): <span id="match"></span></p>
+    <p>Result(test): <span id="test"></span></p>
+    <script>
+        var str = 'Atlanta 5783 75%';
+        // var pattern = /[a-z]/g; // include a to z
+        // var pattern = /[atn]/g; // only mentioned letters
+        // var pattern = /[^atn]/g; // except mentioned letters
+        // var pattern = /[4-7]/g; // numbers betwenn mentioned numbers
+        // var pattern = /\d/g; // only digits
+        // var pattern = /\w/g; // only alphanumeric characters
+        // var pattern = /\W/g; // only special characters 
+        // var pattern = /\s/g; // find the space (if not showing negative number) 
+        // var pattern = /\d{4}/g; // find 4 digits (if not showing negarive number) 
+        // var pattern = /^A/g; // find mentioned letter
+        // var pattern = /^b/g; // if not mentioned letter showing negative number
+        var pattern = /\n/g; // find line break (if not showing negative number)
+        // var pattern = new RegExp('a', 'g');
+        document.getElementById('string').innerHTML = str;
+        document.getElementById('pattern').innerHTML = pattern;
+        document.getElementById('search').innerHTML = str.search(pattern);
+        document.getElementById('match').innerHTML = str.match(pattern);
+        document.getElementById('test').innerHTML = pattern.test(str); 
+    </script>
+</body>
+
+</html>
